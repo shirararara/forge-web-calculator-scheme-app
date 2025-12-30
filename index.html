@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор ковки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://media.istockphoto.com/id/1385521558/vector/smithy-logo-red-vintage-stylized-blacksmith-silhouette-design.jpg?s=612x612&w=0&k=20&c=hOKEygdDAdvGZ-cTnPMk1wGvz6IYDHTmE8PuGzDM1h4=" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>Калькулятор ковки</h1>
+
+    <label>Название схемы</label>
+    <input id="schemeName" type="text" placeholder="Например: Топор (идеал)">
+
+    <label>Целевое значение (0–145)</label>
+    <input id="target" type="number" placeholder="Например: 86">
+
+    <label>Последние операции</label>
+    <input id="tail" type="text" placeholder="Например: 13 13 -6">
+
+    <button onclick="calculate()">Найти решение</button>
+    <button class="secondary-btn" onclick="copyResult()">📋 Скопировать результат</button>
+
+    <div id="output" class="result"></div>
+
+    <div class="history">
+        <div class="history-header">
+            <h2>История</h2>
+            <button class="clear-btn" onclick="clearHistory()">Очистить</button>
+        </div>
+        <div id="historyList"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
